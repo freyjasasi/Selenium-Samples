@@ -54,6 +54,9 @@ public class SamsungPhones {
 		List<String> price_text = price_elements.parallelStream().map(ele -> ele.getText()).filter(e -> !e.isBlank())
 				.collect(Collectors.toList());
 
+		phone_names.forEach(System.out::println);
+		price_text.forEach(System.out::println);
+
 		TimeUnit.SECONDS.sleep(1);
 
 		driver.quit();
