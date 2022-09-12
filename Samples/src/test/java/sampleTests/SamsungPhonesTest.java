@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import TestBase.TestBaseUtility;
-import amazon.AmazonPageObjects;
+import pageObjects.AmazonPageObjects;
 
 public class SamsungPhonesTest extends TestBaseUtility {
 

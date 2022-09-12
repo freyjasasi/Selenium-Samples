@@ -1,4 +1,4 @@
-package amazon;
+package pageObjects;
 
 import java.util.List;
 
