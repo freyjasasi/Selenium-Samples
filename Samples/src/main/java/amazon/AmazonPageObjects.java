@@ -23,6 +23,7 @@ public class AmazonPageObjects extends TestBaseUtility {
 	}
 
 	public static AmazonPageObjects getInstance() {
+		// only one object created all the time
 		if (amazonPageObjects == null) {
 			amazonPageObjects = new AmazonPageObjects();
 		}
