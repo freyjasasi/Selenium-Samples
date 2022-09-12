@@ -42,6 +42,6 @@ public class AmazonPageObjects extends TestBaseUtility {
 	@FindBy(xpath = "(//span[@class='a-price-whole'])")
 	private List<WebElement> price_elements;
 
-	// used to lombok to create getters, setters will be done by pageFactory
+	// used lombok to create getters, setters will be done by pageFactory
 
 }

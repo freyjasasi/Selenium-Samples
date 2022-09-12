@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import TestBase.TestBaseUtility;
 import pageObjects.AmazonPageObjects;
+import utilities.TestUtilities;
 
 public class SamsungPhonesTest extends TestBaseUtility {
 
@@ -24,14 +25,15 @@ public class SamsungPhonesTest extends TestBaseUtility {
 
 		// creating object for page object class
 		AmazonPageObjects amazonPageObjects = AmazonPageObjects.getInstance();
-
 		driver.get(prop.getProperty("amazon_url"));
 
 		WebElement amazon_search_box = amazonPageObjects.getAmazon_search_box();
 		amazon_search_box.sendKeys("samsung phones");
+		TestUtilities.screenGrab("search enter image");
 
 		WebElement search_button = amazonPageObjects.getSearch_button();
 		search_button.click();
+		TestUtilities.screenGrab("search completed image");
 
 		List<WebElement> phone_elements = amazonPageObjects.getPhone_elements();
 		// used streams api to do the data transformation
