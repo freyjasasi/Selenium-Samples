@@ -20,11 +20,10 @@ public class TestBaseUtility {
 
 	public TestBaseUtility() {
 		prop = new Properties();
-
-		try {
-			prop.load(new FileInputStream(new File("src//main//resources//config.properties")));
+		try (FileInputStream inputStream = new FileInputStream(new File("src//main//resources//config.properties"))) {
+			prop.load(inputStream);
 		} catch (IOException e) {
-			throw new RuntimeException(e);
+			e.printStackTrace();
 		}
 	}
 
@@ -42,8 +41,8 @@ public class TestBaseUtility {
 			driver = new FirefoxDriver();
 		} else {
 			// no browser matched use default chrome
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			System.err.println("please use valid browser name in properties file");
+			System.exit(0);
 		}
 
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestUtilities.PAGE_LOAD_TIMEOUT));
