@@ -13,7 +13,7 @@ import amazon.AmazonPageObjects;
 public class SamsungPhonesTest extends TestBaseUtility {
 
 	SamsungPhonesTest() {
-		super(); // to load properties file
+		super(); // to load properties file by calling super class(TestBase class) constructor
 	}
 
 	@Test(priority = 1, enabled = true, groups = { "samsung", "phones", "amazon" })
@@ -34,6 +34,7 @@ public class SamsungPhonesTest extends TestBaseUtility {
 		search_button.click();
 
 		List<WebElement> phone_elements = amazonPageObjects.getPhone_elements();
+		// used streams api to do the data transformation
 		List<String> phone_names = phone_elements.parallelStream().map(ele -> ele.getText()).filter(e -> !e.isBlank())
 				.collect(Collectors.toList());
 
