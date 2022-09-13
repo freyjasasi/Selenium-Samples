@@ -30,6 +30,8 @@ public class AmazonPageObjects extends TestBaseUtility {
 		return amazonPageObjects;
 	}
 
+	// used lombok to create getters, setters will be done by pageFactory
+
 	@FindBy(id = "twotabsearchtextbox")
 	private WebElement amazon_search_box;
 
@@ -42,6 +44,10 @@ public class AmazonPageObjects extends TestBaseUtility {
 	@FindBy(xpath = "(//span[@class='a-price-whole'])")
 	private List<WebElement> price_elements;
 
-	// used lombok to create getters, setters will be done by pageFactory
+	@FindBy(id = "nav-logo-sprites")
+	private WebElement amazon_mainlogo_link;
+
+	@FindBy(xpath = "(//img[@class='landscape-image'])[1]")
+	private WebElement flight_tickets_image_element;
 
 }

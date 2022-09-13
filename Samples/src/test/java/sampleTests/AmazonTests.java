@@ -4,15 +4,16 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import TestBase.TestBaseUtility;
 import pageObjects.AmazonPageObjects;
 import utilities.TestUtilities;
 
-public class SamsungPhonesTest extends TestBaseUtility {
+public class AmazonTests extends TestBaseUtility {
 
-	SamsungPhonesTest() {
+	AmazonTests() {
 		super(); // to load properties file by calling super class(TestBase class) constructor
 	}
 
@@ -20,11 +21,13 @@ public class SamsungPhonesTest extends TestBaseUtility {
 	private void extractPhoneDetailsTest() {
 		System.out.println("Extraction of phone details");
 
-		initialization(); // from test base class
-
 		// creating object for page object class
 		AmazonPageObjects amazonPageObjects = AmazonPageObjects.getInstance();
 		driver.get(prop.getProperty("amazon_url"));
+
+		// assert title
+		String expected = "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in";
+		Assert.assertEquals(TestUtilities.getPageTitle(), expected, "Title is not valid");
 
 		WebElement amazon_search_box = amazonPageObjects.getAmazon_search_box();
 		amazon_search_box.sendKeys("samsung phones");
@@ -48,11 +51,40 @@ public class SamsungPhonesTest extends TestBaseUtility {
 
 		// TimeUnit.SECONDS.sleep(1);
 
-		driver.quit();
+	}
+
+	@Test(groups = { "amazon", "image" }, priority = 2)
+	private void imageValidationTest() {
+		// creating object for page object class
+		AmazonPageObjects amazonPageObjects = AmazonPageObjects.getInstance();
+		driver.get(prop.getProperty("amazon_url"));
+
+		WebElement flight_tickets_image_element = amazonPageObjects.getFlight_tickets_image_element();
+		boolean isImageValid = TestUtilities.validateImage(flight_tickets_image_element);
+		if (isImageValid) {
+			System.out.println("Image is valid");
+		} else {
+			System.out.println("Image is not valid");
+		}
+	}
+
+	@Test(groups = { "amazon", "links" }, priority = 3)
+	private void linkValidationTest() {
+		// creating object for page object class
+		AmazonPageObjects amazonPageObjects = AmazonPageObjects.getInstance();
+		driver.get(prop.getProperty("amazon_url"));
+
+		WebElement amazon_mainlogo_link = amazonPageObjects.getAmazon_mainlogo_link();
+		int link_status_code = TestUtilities.validateLink(amazon_mainlogo_link.getAttribute("href"));
+		if (link_status_code == 200) {
+			System.out.println("Link is valid " + link_status_code);
+		} else {
+			System.out.println("Link is not valid " + link_status_code);
+		}
 
 	}
 
-	@Test(priority = 2, enabled = true, groups = { "amazon", "dropdown", "phones" })
+	@Test(priority = 4, enabled = true, groups = { "amazon", "dropdown", "phones" })
 	private void dropDownsTest() {
 
 	}

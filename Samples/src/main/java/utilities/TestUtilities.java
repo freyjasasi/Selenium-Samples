@@ -8,9 +8,11 @@ import java.util.Date;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
 
 import TestBase.TestBaseUtility;
+import io.restassured.RestAssured;
 
 public class TestUtilities extends TestBaseUtility {
 
@@ -58,6 +60,26 @@ public class TestUtilities extends TestBaseUtility {
 	public static String getAlertText() {
 		Alert alert = driver.switchTo().alert();
 		return alert.getText();
+	}
+
+	// get title
+	public static String getPageTitle() {
+		return driver.getTitle();
+	}
+
+	// link validation
+	public static int validateLink(String url_to_validate) {
+		return RestAssured.given().baseUri(url_to_validate).get().getStatusCode();
+	}
+
+	// image validation
+	public static boolean validateImage(WebElement imageElement) {
+		String imgAttributeBroken = imageElement.getAttribute("naturalWidth"); // it gives 0 if broken
+		if (imgAttributeBroken.equals("0")) {
+			return false; // false image broken
+		} else {
+			return true; // true is image not broken
+		}
 	}
 
 }

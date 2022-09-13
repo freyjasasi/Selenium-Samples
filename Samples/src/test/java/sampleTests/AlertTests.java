@@ -15,7 +15,6 @@ public class AlertTests extends TestBaseUtility {
 
 	@Test
 	private void alertTests() throws InterruptedException {
-		initialization(); // load browser
 		driver.get(prop.getProperty("alert_url")); // load url
 
 		// create object for page objects
@@ -42,8 +41,6 @@ public class AlertTests extends TestBaseUtility {
 		WebElement prompt_alert_text = alertPageObjects.getPrompt_alert_text_ok();
 		TestUtilities.screenGrab("prompt_alert"); // screen capture
 		System.out.println(prompt_alert_text.getText());
-
-		driver.quit();
 
 	}
 
