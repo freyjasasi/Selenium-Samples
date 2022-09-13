@@ -24,15 +24,13 @@ public class AlertTests extends TestBaseUtility {
 		// simple alert
 		WebElement simple_alert = alertPageObjects.getSimple_alert();
 		simple_alert.click();
-		String alertText = TestUtilities.getAlertText();
-		System.out.println(alertText);
+		System.out.println(TestUtilities.getAlertText());
 		TestUtilities.alertAccept();
 
 		// confirm alert
 		WebElement confirm_alert = alertPageObjects.getConfirm_alert();
 		confirm_alert.click();
-		String confirm_alert_text = TestUtilities.getAlertText();
-		System.out.println(confirm_alert_text);
+		System.out.println(TestUtilities.getAlertText());
 		TestUtilities.alertDismiss();
 
 		// prompt alert
@@ -42,7 +40,7 @@ public class AlertTests extends TestBaseUtility {
 		TestUtilities.alertPrompt("Hello Alert!");
 		TestUtilities.alertAccept();
 		WebElement prompt_alert_text = alertPageObjects.getPrompt_alert_text_ok();
-		TestUtilities.screenGrab("prompt_alert");
+		TestUtilities.screenGrab("prompt_alert"); // screen capture
 		System.out.println(prompt_alert_text.getText());
 
 		driver.quit();
