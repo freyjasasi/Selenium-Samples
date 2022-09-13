@@ -57,12 +57,16 @@ public class TestBaseUtility {
 
 	@BeforeTest
 	public void beforeEachTest() {
+		System.out.println("Launching Browser..");
 		initialization();
+		System.out.println("Browser launched!");
 	}
 
 	@AfterTest
 	public void afterEachTest() {
+		System.out.println("Closing Browser..");
 		driver.quit();
+		System.out.println("Browser closed!");
 	}
 
 }
