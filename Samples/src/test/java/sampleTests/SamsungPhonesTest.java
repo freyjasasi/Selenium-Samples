@@ -1,7 +1,6 @@
 package sampleTests;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 import org.openqa.selenium.WebElement;
@@ -18,7 +17,7 @@ public class SamsungPhonesTest extends TestBaseUtility {
 	}
 
 	@Test(priority = 1, enabled = true, groups = { "samsung", "phones", "amazon" })
-	public void extractPhoneDetails() throws InterruptedException {
+	private void extractPhoneDetailsTest() {
 		System.out.println("Extraction of phone details");
 
 		initialization(); // from test base class
@@ -47,9 +46,14 @@ public class SamsungPhonesTest extends TestBaseUtility {
 		phone_names.forEach(System.out::println);
 		price_text.forEach(System.out::println);
 
-		TimeUnit.SECONDS.sleep(1);
+		// TimeUnit.SECONDS.sleep(1);
 
 		driver.quit();
+
+	}
+
+	@Test(priority = 2, enabled = true, groups = { "amazon", "dropdown", "phones" })
+	private void dropDownsTest() {
 
 	}
 }
