@@ -4,12 +4,15 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.Select;
 
 import TestBase.TestBaseUtility;
 import io.restassured.RestAssured;
@@ -32,7 +35,7 @@ public class TestUtilities extends TestBaseUtility {
 
 		try {
 			FileHandler.copy(source, destination);
-			System.out.println("screen grab done for :" + fileName);
+			System.out.println("screen grab done for: " + fileName);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -81,5 +84,32 @@ public class TestUtilities extends TestBaseUtility {
 			return true; // true is image not broken
 		}
 	}
+
+	// select by index
+	public static void selectByIndex(WebElement element, int index) {
+		Select select = new Select(element);
+		select.selectByIndex(index);
+	}
+
+	// select by value
+	public static void selectByValue(WebElement element, String value) {
+		Select select = new Select(element);
+		select.selectByValue(value);
+	}
+
+	// select by visible text
+	public static void selectByVisibleText(WebElement element, String text) {
+		Select select = new Select(element);
+		select.selectByVisibleText(text);
+	}
+
+	// get all options
+	public static List<String> getAllOptions(WebElement element) {
+		Select select = new Select(element);
+		List<WebElement> options = select.getOptions();
+		return options.parallelStream().map(e -> e.getText()).collect(Collectors.toList());
+	}
+
+	// these also an be extended to deSelect as well
 
 }

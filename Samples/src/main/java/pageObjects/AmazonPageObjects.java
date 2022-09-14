@@ -50,4 +50,7 @@ public class AmazonPageObjects extends TestBaseUtility {
 	@FindBy(xpath = "(//img[@class='landscape-image'])[1]")
 	private WebElement flight_tickets_image_element;
 
+	@FindBy(id = "searchDropdownBox")
+	private WebElement catagory_dropdown;
+
 }
