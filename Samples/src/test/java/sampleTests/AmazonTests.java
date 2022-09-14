@@ -1,5 +1,9 @@
 package sampleTests;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -19,24 +23,24 @@ public class AmazonTests extends TestBaseUtility {
 		super(); // to load properties file by calling super class(TestBase class) constructor
 	}
 
-	@Test(priority = 1, enabled = true, groups = { "samsung", "phones", "amazon" })
-	private void extractPhoneDetailsTest() {
-		System.out.println("Extraction of phone details");
+	@Test(priority = 1, groups = { "search", "amazon", "data driven" })
+	private void extractPhoneDetailsTest(String search_term) throws IOException {
+		System.out.println("Extraction of details started.. for " + search_term);
 
-		// creating object for page object class
-		AmazonPageObjects amazonPageObjects = AmazonPageObjects.getInstance();
 		driver.get(prop.getProperty("amazon_url"));
-
 		// assert title
 		String expected = "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in";
 		Assert.assertEquals(TestUtilities.getPageTitle(), expected, "Title is not valid");
 
+		// creating object for page object class
+		AmazonPageObjects amazonPageObjects = AmazonPageObjects.getInstance();
+
 		WebElement amazon_search_box = amazonPageObjects.getAmazon_search_box();
-		amazon_search_box.sendKeys("samsung phones");
+		amazon_search_box.sendKeys(search_term);
 
 		WebElement search_button = amazonPageObjects.getSearch_button();
 		search_button.click();
-		TestUtilities.screenGrab("search completed image"); // screen grab
+		TestUtilities.screenGrab("search completed image for " + search_term); // screen grab
 
 		List<WebElement> phone_elements = amazonPageObjects.getPhone_elements();
 		// used streams api to do the data transformation
@@ -47,13 +51,16 @@ public class AmazonTests extends TestBaseUtility {
 		List<String> price_text = price_elements.parallelStream().map(ele -> ele.getText()).filter(e -> !e.isBlank())
 				.collect(Collectors.toList());
 
-		LinkedList<String> phone_names_linked = new LinkedList<>(phone_names);
+		LinkedList<String> phone_names_list = new LinkedList<>(phone_names);
+		LinkedList<String> price_list = new LinkedList<>(price_text);
 
-		System.out.println(phone_names_linked);
-		price_text.forEach(System.out::println);
+		LinkedList<LinkedList<String>> all_data = new LinkedList<>();
+		all_data.add(phone_names_list);
+		all_data.add(price_list);
 
-		// TimeUnit.SECONDS.sleep(1);
+		TestUtilities.writeListToExcelUsingPOI(all_data, search_term + "_search_results");
 
+		System.out.println("Extraction of details finished for " + search_term);
 	}
 
 	@Test(groups = { "amazon", "image" }, priority = 2)
@@ -102,5 +109,18 @@ public class AmazonTests extends TestBaseUtility {
 
 		TestUtilities.getAllOptions(search_suggesstions).forEach(System.out::println);
 
+	}
+
+	@Test(priority = 0, groups = { "amazon", "search", "data driven" })
+	private void multipleProductSearch() throws IOException {
+		FileInputStream inputStream = new FileInputStream(new File("src//main//resources//phone_details.xlsx"));
+		LinkedHashSet<String> search_terms = TestUtilities.readFromExcel(inputStream);
+		search_terms.forEach(e -> {
+			try {
+				extractPhoneDetailsTest(e);
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
+		});
 	}
 }
