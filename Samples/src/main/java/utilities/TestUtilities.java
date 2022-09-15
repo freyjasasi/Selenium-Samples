@@ -148,11 +148,11 @@ public class TestUtilities extends TestBaseUtility {
 
 		Cell cellTitle = row1.createCell(0);
 		cellTitle.setCellStyle(cellStyle);
-		cellTitle.setCellValue("phone models");
+		cellTitle.setCellValue("Products");
 
 		Cell cellAuthor = row1.createCell(1);
 		cellAuthor.setCellStyle(cellStyle);
-		cellAuthor.setCellValue("price");
+		cellAuthor.setCellValue("Price");
 
 		int rowSize = all_data.size();
 		int colSize = all_data.get(0).size();
@@ -207,6 +207,34 @@ public class TestUtilities extends TestBaseUtility {
 		}
 		workbook.close();
 		return keys;
+	}
+
+	// window handling
+	public static void goToWindowbyTitle(String windowTitle, List<String> list) {
+		for (String w : list) {
+			String title = driver.switchTo().window(w).getTitle();
+			if (title.contains(windowTitle)) {
+				driver.switchTo().window(w);
+			}
+		}
+	}
+
+	public static void goToWindowbyIndex(int index, List<String> list) {
+		driver.switchTo().window(list.get(index));
+	}
+
+	public static void closeAllExceptParentWindow(String parentWindow, List<String> list) {
+		for (String w : list) {
+			if (!w.contains(parentWindow)) {
+				driver.switchTo().window(w);
+				System.out.println("Closing " + driver.switchTo().window(w).getTitle());
+				driver.close();
+			}
+		}
+	}
+
+	public static void goToParentWindow(String parentWindow) {
+		driver.switchTo().window(parentWindow);
 	}
 
 }
