@@ -21,8 +21,10 @@ import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.Select;
@@ -235,6 +237,31 @@ public class TestUtilities extends TestBaseUtility {
 
 	public static void goToParentWindow(String parentWindow) {
 		driver.switchTo().window(parentWindow);
+	}
+
+	// javaScript based utilities
+	public static void highlightElementOn(WebElement element, WebDriver driver) {
+		// 1. element highlight
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].setAttribute('style', 'border: 3px solid red')", element);
+	}
+
+	public static void highlightElementOff(WebElement element, WebDriver driver) {
+		// 1. element highlight
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].setAttribute('style', 'border: 0px solid red')", element);
+	}
+
+	public static void scrollIntoView(WebDriver driver, WebElement element) {
+		// scroll into view till element visible
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
+	}
+
+	public static void scrollToBottom(WebDriver driver) {
+		// scroll down
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
 	}
 
 }

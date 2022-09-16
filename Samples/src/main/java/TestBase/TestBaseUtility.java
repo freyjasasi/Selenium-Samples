@@ -10,15 +10,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringDecorator;
+import org.openqa.selenium.support.events.WebDriverListener;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import utilities.TestEventListener;
 import utilities.TestUtilities;
 
 public class TestBaseUtility {
 	public static Properties prop;
 	public static WebDriver driver;
+	public static WebDriverListener listener;
 
 	public TestBaseUtility() {
 		prop = new Properties();
@@ -46,6 +50,10 @@ public class TestBaseUtility {
 			System.err.println("please use valid browser name in properties file");
 			System.exit(0);
 		}
+
+		// listener class implementation
+		listener = new TestEventListener();
+		driver = new EventFiringDecorator<WebDriver>(listener).decorate(driver);
 
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestUtilities.PAGE_LOAD_TIMEOUT));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TestUtilities.IMPLICIT_WAIT));
