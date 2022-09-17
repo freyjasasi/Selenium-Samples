@@ -290,4 +290,21 @@ public class TestUtilities extends TestBaseUtility {
 		Actions actions = (Actions) driver;
 		actions.contextClick(element).build().perform();
 	}
+
+	// frame utility methods
+	public static void switchToFramebyIndex(int index) {
+		driver.switchTo().frame(index);
+	}
+
+	public static void switchToFramebyName(String name) {
+		driver.switchTo().frame(name);
+	}
+
+	public static void switchToParentFrame() {
+		driver.switchTo().parentFrame();
+	}
+
+	public static void switchToFrameByElement(WebElement element) {
+		driver.switchTo().frame(element);
+	}
 }
