@@ -1,0 +1,59 @@
+[INFO ] 2022-09-17 12:51:41.084 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 12:51:41.235 [main] Log - Launching Browser..
+[INFO ] 2022-09-17 12:51:55.403 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 12:51:56.667 [main] Log - Browser launched!
+[INFO ] 2022-09-17 12:52:04.244 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 12:52:06.669 [main] Log - LetCode - Testing Hub
+[INFO ] 2022-09-17 12:52:07.198 [main] Log - Window handling - LetCode
+[INFO ] 2022-09-17 12:52:08.661 [main] Log - Closing LetCode - Testing Hub
+[INFO ] 2022-09-17 12:52:11.934 [main] Log - Closing LetCode with Koushik
+[INFO ] 2022-09-17 12:52:12.563 [main] Log - Closing LetCode with Koushik
+[INFO ] 2022-09-17 12:52:12.772 [main] Log - Window handling - LetCode
+[INFO ] 2022-09-17 12:52:12.793 [main] Log - Closing Browser..
+[INFO ] 2022-09-17 12:52:13.612 [main] Log - Browser closed!
+[INFO ] 2022-09-17 13:05:00.124 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 13:05:00.228 [main] Log - Launching Browser..
+[INFO ] 2022-09-17 13:05:05.932 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 13:05:07.886 [main] Log - Browser launched!
+[INFO ] 2022-09-17 13:05:07.990 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 13:05:11.582 [main] Log - Google
+[INFO ] 2022-09-17 13:05:11.602 [main] Log - Closing Browser..
+[INFO ] 2022-09-17 13:05:12.299 [main] Log - Browser closed!
+[INFO ] 2022-09-17 13:35:20.328 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 13:35:20.460 [main] Log - Launching Browser..
+[INFO ] 2022-09-17 13:35:26.397 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 13:35:27.886 [main] Log - Browser launched!
+[INFO ] 2022-09-17 13:35:27.979 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 13:35:31.398 [main] Log - Google
+[INFO ] 2022-09-17 13:35:31.492 [main] Log - null
+[INFO ] 2022-09-17 13:35:31.515 [main] Log - Closing Browser..
+[INFO ] 2022-09-17 13:35:31.937 [main] Log - Browser closed!
+[INFO ] 2022-09-17 13:37:04.677 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 13:37:04.769 [main] Log - Launching Browser..
+[INFO ] 2022-09-17 13:37:08.610 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 13:37:09.452 [main] Log - Browser launched!
+[INFO ] 2022-09-17 13:37:09.501 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 13:37:12.801 [main] Log - Google
+[INFO ] 2022-09-17 13:37:12.900 [main] Log - null
+[INFO ] 2022-09-17 13:37:12.914 [main] Log - Closing Browser..
+[INFO ] 2022-09-17 13:37:13.099 [main] Log - Browser closed!
+[INFO ] 2022-09-17 13:39:08.965 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 13:39:09.074 [main] Log - Launching Browser..
+[INFO ] 2022-09-17 13:39:14.864 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 13:39:16.277 [main] Log - Browser launched!
+[INFO ] 2022-09-17 13:39:16.330 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 13:39:19.339 [main] Log - Google
+[INFO ] 2022-09-17 13:39:19.445 [main] Log - null
+[INFO ] 2022-09-17 13:39:19.714 [main] Log - null
+[INFO ] 2022-09-17 13:39:19.724 [main] Log - Closing Browser..
+[INFO ] 2022-09-17 13:39:20.169 [main] Log - Browser closed!
+[INFO ] 2022-09-17 13:42:15.482 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 13:42:15.568 [main] Log - Launching Browser..
+[INFO ] 2022-09-17 13:42:20.055 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 13:42:21.240 [main] Log - Browser launched!
+[INFO ] 2022-09-17 13:42:21.302 [main] Log - Properties loaded!
+[INFO ] 2022-09-17 13:42:24.858 [main] Log - Google
+[INFO ] 2022-09-17 13:42:24.931 [main] Log - none solid rgb(26, 13, 171)
+[INFO ] 2022-09-17 13:42:25.176 [main] Log - underline solid rgb(26, 13, 171)
+[INFO ] 2022-09-17 13:42:25.185 [main] Log - Closing Browser..
+[INFO ] 2022-09-17 13:42:25.522 [main] Log - Browser closed!

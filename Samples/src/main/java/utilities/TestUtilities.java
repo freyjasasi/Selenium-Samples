@@ -262,32 +262,32 @@ public class TestUtilities extends TestBaseUtility {
 
 	// some mostly used Action utility
 	public static void hoverOver(WebElement element) {
-		Actions actions = (Actions) driver;
+		Actions actions = new Actions(driver);
 		actions.moveToElement(element).build().perform();
 	}
 
 	public static void scrollToElement(WebElement element) {
-		Actions actions = (Actions) driver;
+		Actions actions = new Actions(driver);
 		actions.scrollToElement(element).build().perform();
 	}
 
 	public static void dragAndDrop(WebElement source, WebElement destination) {
-		Actions actions = (Actions) driver;
+		Actions actions = new Actions(driver);
 		actions.dragAndDrop(source, destination).build().perform();
 	}
 
 	public static void clickAndHold(WebElement element) {
-		Actions actions = (Actions) driver;
+		Actions actions = new Actions(driver);
 		actions.clickAndHold(element).build().perform();
 	}
 
 	public static void doubleClick(WebElement element) {
-		Actions actions = (Actions) driver;
+		Actions actions = new Actions(driver);
 		actions.doubleClick(element).build().perform();
 	}
 
 	public static void contextClick(WebElement element) {
-		Actions actions = (Actions) driver;
+		Actions actions = new Actions(driver);
 		actions.contextClick(element).build().perform();
 	}
 
