@@ -16,13 +16,11 @@ public class TestEventListener extends TestBaseUtility implements WebDriverListe
 	@Override
 	public void beforeClick(WebElement element) {
 		TestUtilities.highlightElement(element, driver);
-		WebDriverListener.super.beforeClick(element);
 	}
 
 	@Override
 	public void afterFindElement(WebElement element, By locator, WebElement result) {
 		TestUtilities.highlightElement(element, driver);
-		WebDriverListener.super.afterFindElement(element, locator, result);
 	}
 
 }

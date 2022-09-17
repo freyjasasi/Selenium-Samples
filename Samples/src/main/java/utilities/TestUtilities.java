@@ -29,6 +29,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.Select;
 
@@ -259,4 +260,34 @@ public class TestUtilities extends TestBaseUtility {
 		js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
 	}
 
+	// some mostly used Action utility
+	public static void hoverOver(WebElement element) {
+		Actions actions = (Actions) driver;
+		actions.moveToElement(element).build().perform();
+	}
+
+	public static void scrollToElement(WebElement element) {
+		Actions actions = (Actions) driver;
+		actions.scrollToElement(element).build().perform();
+	}
+
+	public static void dragAndDrop(WebElement source, WebElement destination) {
+		Actions actions = (Actions) driver;
+		actions.dragAndDrop(source, destination).build().perform();
+	}
+
+	public static void clickAndHold(WebElement element) {
+		Actions actions = (Actions) driver;
+		actions.clickAndHold(element).build().perform();
+	}
+
+	public static void doubleClick(WebElement element) {
+		Actions actions = (Actions) driver;
+		actions.doubleClick(element).build().perform();
+	}
+
+	public static void contextClick(WebElement element) {
+		Actions actions = (Actions) driver;
+		actions.contextClick(element).build().perform();
+	}
 }
