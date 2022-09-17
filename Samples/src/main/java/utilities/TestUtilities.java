@@ -12,6 +12,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.apache.commons.logging.Log;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
@@ -37,9 +40,7 @@ public class TestUtilities extends TestBaseUtility {
 	// we can also define this inside config properties file
 	public static final long PAGE_LOAD_TIMEOUT = 30;
 	public static final long IMPLICIT_WAIT = 20;
-
-	// more utils will be added, select, alert, action, screenshot, excel read and
-	// write, highlight element,action
+	private static final Logger log = LogManager.getLogger(Log.class);
 
 	public static void screenGrab(String fileName) {
 		TakesScreenshot screenshot = (TakesScreenshot) driver;
@@ -50,7 +51,7 @@ public class TestUtilities extends TestBaseUtility {
 
 		try {
 			FileHandler.copy(source, destination);
-			System.out.println("screen grab done for: " + fileName);
+			log.info("screen grab done for: " + fileName);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -60,19 +61,19 @@ public class TestUtilities extends TestBaseUtility {
 	public static void alertAccept() {
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
-		System.out.println("Alert accepted");
+		log.info("Alert accepted");
 	}
 
 	public static void alertDismiss() {
 		Alert alert = driver.switchTo().alert();
 		alert.dismiss();
-		System.out.println("Alert Dismissed");
+		log.info("Alert Dismissed");
 	}
 
 	public static void alertPrompt(String prompt) {
 		Alert alert = driver.switchTo().alert();
 		alert.sendKeys(prompt);
-		System.out.println("keys send to alert :" + prompt);
+		log.info("keys send to alert :" + prompt);
 	}
 
 	public static String getAlertText() {
@@ -130,7 +131,7 @@ public class TestUtilities extends TestBaseUtility {
 	// write to excel
 	public static void writeListToExcelUsingPOI(LinkedList<LinkedList<String>> all_data, String fileName)
 			throws IOException {
-		System.out.println("Excel writing started..");
+		log.info("Excel writing started..");
 		// using apache POI workbook
 		XSSFWorkbook workbook = new XSSFWorkbook();
 		XSSFSheet sheet = workbook.createSheet(prop.getProperty("sheetName"));
@@ -183,7 +184,7 @@ public class TestUtilities extends TestBaseUtility {
 		fileOut.close();
 		workbook.close();
 
-		System.out.println("Excel write finished!");
+		log.info("Excel write finished!");
 	}
 
 	public static LinkedHashSet<String> readFromExcel(FileInputStream inputStream) throws IOException {
@@ -229,7 +230,7 @@ public class TestUtilities extends TestBaseUtility {
 		for (String w : list) {
 			if (!w.contains(parentWindow)) {
 				driver.switchTo().window(w);
-				System.out.println("Closing " + driver.switchTo().window(w).getTitle());
+				log.info("Closing " + driver.switchTo().window(w).getTitle());
 				driver.close();
 			}
 		}
@@ -240,16 +241,10 @@ public class TestUtilities extends TestBaseUtility {
 	}
 
 	// javaScript based utilities
-	public static void highlightElementOn(WebElement element, WebDriver driver) {
+	public static void highlightElement(WebElement element, WebDriver driver) {
 		// 1. element highlight
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].setAttribute('style', 'border: 3px solid red')", element);
-	}
-
-	public static void highlightElementOff(WebElement element, WebDriver driver) {
-		// 1. element highlight
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].setAttribute('style', 'border: 0px solid red')", element);
 	}
 
 	public static void scrollIntoView(WebDriver driver, WebElement element) {

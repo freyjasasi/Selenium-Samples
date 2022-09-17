@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.commons.logging.Log;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -23,11 +26,13 @@ public class TestBaseUtility {
 	public static Properties prop;
 	public static WebDriver driver;
 	public static WebDriverListener listener;
+	private static final Logger log = LogManager.getLogger(Log.class);
 
 	public TestBaseUtility() {
 		prop = new Properties();
 		try (FileInputStream inputStream = new FileInputStream(new File("src//main//resources//config.properties"))) {
 			prop.load(inputStream);
+			log.info("Properties loaded!");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -47,7 +52,7 @@ public class TestBaseUtility {
 			driver = new FirefoxDriver();
 		} else {
 			// no browser matched use default chrome
-			System.err.println("please use valid browser name in properties file");
+			log.error("please use valid browser name in properties file");
 			System.exit(0);
 		}
 
@@ -65,16 +70,16 @@ public class TestBaseUtility {
 
 	@BeforeTest
 	public void beforeEachTest() {
-		System.out.println("Launching Browser..");
+		log.info("Launching Browser..");
 		initialization();
-		System.out.println("Browser launched!");
+		log.info("Browser launched!");
 	}
 
 	@AfterTest
 	public void afterEachTest() {
-		System.out.println("Closing Browser..");
+		log.info("Closing Browser..");
 		driver.quit();
-		System.out.println("Browser closed!");
+		log.info("Browser closed!");
 	}
 
 }

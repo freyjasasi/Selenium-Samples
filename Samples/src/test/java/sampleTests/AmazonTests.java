@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
+import org.apache.commons.logging.Log;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -18,6 +21,7 @@ import pageObjects.AmazonPageObjects;
 import utilities.TestUtilities;
 
 public class AmazonTests extends TestBaseUtility {
+	private static final Logger log = LogManager.getLogger(Log.class);
 
 	AmazonTests() {
 		super(); // to load properties file by calling super class(TestBase class) constructor
@@ -25,7 +29,7 @@ public class AmazonTests extends TestBaseUtility {
 
 	@Test(priority = 1, groups = { "search", "amazon", "data driven" })
 	private void extractPhoneDetailsTest(String search_term) throws IOException {
-		System.out.println("Extraction of details started.. for " + search_term);
+		log.info("Extraction of details started.. for " + search_term);
 
 		driver.get(prop.getProperty("amazon_url"));
 		// assert title
@@ -60,7 +64,7 @@ public class AmazonTests extends TestBaseUtility {
 
 		TestUtilities.writeListToExcelUsingPOI(all_data, search_term + "_search_results");
 
-		System.out.println("Extraction of details finished for " + search_term);
+		log.info("Extraction of details finished for " + search_term);
 	}
 
 	@Test(groups = { "amazon", "image" }, priority = 2)
@@ -72,9 +76,9 @@ public class AmazonTests extends TestBaseUtility {
 		WebElement flight_tickets_image_element = amazonPageObjects.getFlight_tickets_image_element();
 		boolean isImageValid = TestUtilities.validateImage(flight_tickets_image_element);
 		if (isImageValid) {
-			System.out.println("Image is valid");
+			log.info("Image is valid");
 		} else {
-			System.out.println("Image is not valid");
+			log.info("Image is not valid");
 		}
 	}
 
@@ -87,9 +91,9 @@ public class AmazonTests extends TestBaseUtility {
 		WebElement amazon_mainlogo_link = amazonPageObjects.getAmazon_mainlogo_link();
 		int link_status_code = TestUtilities.validateLink(amazon_mainlogo_link.getAttribute("href"));
 		if (link_status_code == 200) {
-			System.out.println("Link is valid " + link_status_code);
+			log.info("Link is valid " + link_status_code);
 		} else {
-			System.out.println("Link is not valid " + link_status_code);
+			log.info("Link is not valid " + link_status_code);
 		}
 
 	}
