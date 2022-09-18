@@ -62,6 +62,7 @@ public class AmazonTests extends TestBaseUtility {
 		all_data.add(phone_names_list);
 		all_data.add(price_list);
 
+		// header row's column names list
 		LinkedList<String> header_rows = new LinkedList<>(List.of("product names", "price"));
 		TestUtilities.writeListToExcelUsingPOI(all_data, search_term + "_search_results", header_rows);
 
