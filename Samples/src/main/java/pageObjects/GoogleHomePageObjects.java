@@ -26,4 +26,10 @@ public class GoogleHomePageObjects extends TestBaseUtility {
 
 	@FindBy(linkText = "தமிழ்")
 	private WebElement tamil_lan_selector_element;
+
+	@FindBy(linkText = "How Search works")
+	private WebElement how_search_works_link_element;
+
+	@FindBy(name = "q")
+	private WebElement google_search_box_element;
 }

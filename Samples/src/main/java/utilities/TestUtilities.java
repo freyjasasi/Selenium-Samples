@@ -130,8 +130,8 @@ public class TestUtilities extends TestBaseUtility {
 	// these also an be extended to deSelect as well
 
 	// write to excel
-	public static void writeListToExcelUsingPOI(LinkedList<LinkedList<String>> all_data, String fileName)
-			throws IOException {
+	public static void writeListToExcelUsingPOI(LinkedList<LinkedList<String>> all_data, String fileName,
+			LinkedList<String> headers) throws IOException {
 		log.info("Excel writing started..");
 		// using apache POI workbook
 		XSSFWorkbook workbook = new XSSFWorkbook();
@@ -143,20 +143,11 @@ public class TestUtilities extends TestBaseUtility {
 
 		CellStyle cellStyle = sheet.getWorkbook().createCellStyle();
 		cellStyle.setAlignment(HorizontalAlignment.CENTER);
-		cellStyle.setFont(font);
+//		cellStyle.setFont(font);
 		cellStyle.setWrapText(false);
 		cellStyle.setFont(font);
 
-		// creating header rows
-		Row row1 = sheet.createRow(0);
-
-		Cell cellTitle = row1.createCell(0);
-		cellTitle.setCellStyle(cellStyle);
-		cellTitle.setCellValue("Products");
-
-		Cell cellAuthor = row1.createCell(1);
-		cellAuthor.setCellStyle(cellStyle);
-		cellAuthor.setCellValue("Price");
+		headerRowCreationHelperMethod(sheet, cellStyle, headers);
 
 		int rowSize = all_data.size();
 		int colSize = all_data.get(0).size();
@@ -186,6 +177,21 @@ public class TestUtilities extends TestBaseUtility {
 		workbook.close();
 
 		log.info("Excel write finished!");
+	}
+
+	// header rows dynamic helper method
+	private static void headerRowCreationHelperMethod(XSSFSheet sheet, CellStyle cellStyle,
+			LinkedList<String> headers) {
+		// creating header rows
+		Row row1 = sheet.createRow(0);
+
+		int header_rows = headers.size();
+		for (int i = 0; i < header_rows; i++) {
+			Cell cell = row1.createCell(i);
+			cell.setCellStyle(cellStyle);
+			cell.setCellValue(headers.get(i));
+		}
+
 	}
 
 	public static LinkedHashSet<String> readFromExcel(FileInputStream inputStream) throws IOException {

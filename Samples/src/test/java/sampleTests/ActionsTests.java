@@ -3,6 +3,7 @@ package sampleTests;
 import org.apache.commons.logging.Log;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
@@ -33,6 +34,13 @@ public class ActionsTests extends TestBaseUtility {
 		String after = tamil_lan_selector_element.getCssValue("text-decoration");
 		log.info(after);
 
+		WebElement how_search_works_link_element = googleHomePageObjects.getHow_search_works_link_element();
+		WebElement google_search_box_element = googleHomePageObjects.getGoogle_search_box_element();
+		TestUtilities.dragAndDrop(how_search_works_link_element, google_search_box_element);
+
+		google_search_box_element.click();
+		google_search_box_element.sendKeys(Keys.ENTER);
+		log.info(driver.getTitle());
 	}
 
 }

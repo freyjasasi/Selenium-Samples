@@ -62,7 +62,8 @@ public class AmazonTests extends TestBaseUtility {
 		all_data.add(phone_names_list);
 		all_data.add(price_list);
 
-		TestUtilities.writeListToExcelUsingPOI(all_data, search_term + "_search_results");
+		LinkedList<String> header_rows = new LinkedList<>(List.of("product names", "price"));
+		TestUtilities.writeListToExcelUsingPOI(all_data, search_term + "_search_results", header_rows);
 
 		log.info("Extraction of details finished for " + search_term);
 	}
@@ -118,6 +119,7 @@ public class AmazonTests extends TestBaseUtility {
 	@Test(priority = 0, groups = { "amazon", "search", "data driven" })
 	private void multipleProductSearch() throws IOException {
 		FileInputStream inputStream = new FileInputStream(new File("src//main//resources//phone_details.xlsx"));
+		// used LinkedHashSet to remove duplicates and ordered
 		LinkedHashSet<String> search_terms = TestUtilities.readFromExcel(inputStream);
 		search_terms.forEach(e -> {
 			try {
