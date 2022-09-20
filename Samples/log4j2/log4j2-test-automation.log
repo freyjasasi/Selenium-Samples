@@ -30,3 +30,59 @@
 [INFO ] 2022-09-18 15:23:09.647 [main] Log - Extraction of details finished for apple watch latest
 [INFO ] 2022-09-18 15:23:09.655 [main] Log - Closing Browser..
 [INFO ] 2022-09-18 15:23:10.464 [main] Log - Browser closed!
+[INFO ] 2022-09-20 22:53:53.878 [main] Log - Properties loaded!
+[INFO ] 2022-09-20 22:53:54.065 [main] Log - Launching Browser..
+[INFO ] 2022-09-20 22:54:00.455 [main] Log - Properties loaded!
+[INFO ] 2022-09-20 22:54:01.499 [main] Log - Browser launched!
+[INFO ] 2022-09-20 22:54:11.078 [main] Log - Properties loaded!
+[INFO ] 2022-09-20 22:54:19.353 [main] Log - Closing Browser..
+[INFO ] 2022-09-20 22:54:19.719 [main] Log - Browser closed!
+[INFO ] 2022-09-20 22:54:41.493 [main] Log - Properties loaded!
+[INFO ] 2022-09-20 22:54:41.608 [main] Log - Launching Browser..
+[INFO ] 2022-09-20 22:54:45.846 [main] Log - Properties loaded!
+[INFO ] 2022-09-20 22:54:47.096 [main] Log - Browser launched!
+[INFO ] 2022-09-20 22:54:48.224 [main] Log - Extraction of details started.. for iphones
+[INFO ] 2022-09-20 22:54:56.988 [main] Log - Properties loaded!
+[INFO ] 2022-09-20 22:55:01.678 [main] Log - Excel writing started..
+[INFO ] 2022-09-20 22:55:01.910 [main] Log - Closing Browser..
+[INFO ] 2022-09-20 22:55:02.396 [main] Log - Browser closed!
+[INFO ] 2022-09-20 22:56:16.310 [main] Log - Properties loaded!
+[INFO ] 2022-09-20 22:56:16.390 [main] Log - Launching Browser..
+[INFO ] 2022-09-20 22:56:19.664 [main] Log - Properties loaded!
+[INFO ] 2022-09-20 22:56:20.659 [main] Log - Browser launched!
+[INFO ] 2022-09-20 22:56:21.432 [main] Log - Extraction of details started.. for iphones
+[INFO ] 2022-09-20 22:56:31.016 [main] Log - Properties loaded!
+[INFO ] 2022-09-20 22:56:34.699 [main] Log - screen grab done for: search completed image for iphones
+[INFO ] 2022-09-20 22:56:36.087 [main] Log - Excel writing started..
+[INFO ] 2022-09-20 22:56:36.557 [main] Log - Excel write finished!
+[INFO ] 2022-09-20 22:56:36.558 [main] Log - Extraction of details finished for iphones
+[INFO ] 2022-09-20 22:56:36.558 [main] Log - Extraction of details started.. for samsung phones
+[INFO ] 2022-09-20 22:56:58.474 [main] Log - screen grab done for: search completed image for samsung phones
+[INFO ] 2022-09-20 22:56:59.840 [main] Log - Excel writing started..
+[INFO ] 2022-09-20 22:56:59.897 [main] Log - Excel write finished!
+[INFO ] 2022-09-20 22:56:59.897 [main] Log - Extraction of details finished for samsung phones
+[INFO ] 2022-09-20 22:56:59.897 [main] Log - Extraction of details started.. for realme phones
+[INFO ] 2022-09-20 22:57:07.861 [main] Log - screen grab done for: search completed image for realme phones
+[INFO ] 2022-09-20 22:57:08.681 [main] Log - Excel writing started..
+[INFO ] 2022-09-20 22:57:08.708 [main] Log - Excel write finished!
+[INFO ] 2022-09-20 22:57:08.708 [main] Log - Extraction of details finished for realme phones
+[INFO ] 2022-09-20 22:57:08.708 [main] Log - Extraction of details started.. for Hp laptops
+[INFO ] 2022-09-20 22:57:19.381 [main] Log - screen grab done for: search completed image for Hp laptops
+[INFO ] 2022-09-20 22:57:20.336 [main] Log - Excel writing started..
+[INFO ] 2022-09-20 22:57:20.369 [main] Log - Excel write finished!
+[INFO ] 2022-09-20 22:57:20.370 [main] Log - Extraction of details finished for Hp laptops
+[INFO ] 2022-09-20 22:57:20.370 [main] Log - Extraction of details started.. for apple watch latest
+[INFO ] 2022-09-20 22:57:26.586 [main] Log - screen grab done for: search completed image for apple watch latest
+[INFO ] 2022-09-20 22:57:28.090 [main] Log - Excel writing started..
+[INFO ] 2022-09-20 22:57:28.137 [main] Log - Excel write finished!
+[INFO ] 2022-09-20 22:57:28.137 [main] Log - Extraction of details finished for apple watch latest
+[INFO ] 2022-09-20 22:57:28.152 [main] Log - Closing Browser..
+[INFO ] 2022-09-20 22:57:29.053 [main] Log - Browser closed!
+[INFO ] 2022-09-20 23:00:38.670 [main] Log - Properties loaded!
+[INFO ] 2022-09-20 23:00:38.880 [main] Log - Launching Browser..
+[INFO ] 2022-09-20 23:00:43.298 [main] Log - Properties loaded!
+[INFO ] 2022-09-20 23:00:44.520 [main] Log - Browser launched!
+[INFO ] 2022-09-20 23:00:44.541 [main] Log - Properties loaded!
+[INFO ] 2022-09-20 23:00:53.777 [main] Log - Link is valid 200
+[INFO ] 2022-09-20 23:00:53.783 [main] Log - Closing Browser..
+[INFO ] 2022-09-20 23:00:54.158 [main] Log - Browser closed!

@@ -1,5 +1,15 @@
 package sampleTests;
 
+import TestBase.TestBaseUtility;
+import org.apache.commons.logging.Log;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import pageObjects.AmazonPageObjects;
+import utilities.TestUtilities;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,18 +17,6 @@ import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
-
-import org.apache.commons.logging.Log;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import TestBase.TestBaseUtility;
-import pageObjects.AmazonPageObjects;
-import utilities.TestUtilities;
 
 public class AmazonTests extends TestBaseUtility {
 	private static final Logger log = LogManager.getLogger(Log.class);
@@ -48,12 +46,10 @@ public class AmazonTests extends TestBaseUtility {
 
 		List<WebElement> phone_elements = amazonPageObjects.getPhone_elements();
 		// used streams api to do the data transformation
-		List<String> phone_names = phone_elements.parallelStream().map(ele -> ele.getText()).filter(e -> !e.isBlank())
-				.collect(Collectors.toList());
+		List<String> phone_names = phone_elements.parallelStream().map(WebElement::getText).filter(e -> !e.isBlank()).toList();
 
 		List<WebElement> price_elements = amazonPageObjects.getPrice_elements();
-		List<String> price_text = price_elements.parallelStream().map(ele -> ele.getText()).filter(e -> !e.isBlank())
-				.collect(Collectors.toList());
+		List<String> price_text = price_elements.parallelStream().map(WebElement::getText).filter(e -> !e.isBlank()).toList();
 
 		LinkedList<String> phone_names_list = new LinkedList<>(phone_names);
 		LinkedList<String> price_list = new LinkedList<>(price_text);
@@ -105,15 +101,15 @@ public class AmazonTests extends TestBaseUtility {
 		driver.get(prop.getProperty("amazon_url"));
 		AmazonPageObjects amazonPageObjects = AmazonPageObjects.getInstance();
 
-		WebElement search_suggesstions = amazonPageObjects.getCatagory_dropdown();
-		TestUtilities.selectByIndex(search_suggesstions, 10);
+		WebElement search_suggestions = amazonPageObjects.getCatagory_dropdown();
+		TestUtilities.selectByIndex(search_suggestions, 10);
 		TimeUnit.SECONDS.sleep(2); // Books
-		TestUtilities.selectByValue(search_suggesstions, "search-alias=shoes");
+		TestUtilities.selectByValue(search_suggestions, "search-alias=shoes");
 		TimeUnit.SECONDS.sleep(2); // shoes
-		TestUtilities.selectByVisibleText(search_suggesstions, "Watches");
+		TestUtilities.selectByVisibleText(search_suggestions, "Watches");
 		TimeUnit.SECONDS.sleep(2); // watches
 
-		TestUtilities.getAllOptions(search_suggesstions).forEach(System.out::println);
+		TestUtilities.getAllOptions(search_suggestions).forEach(System.out::println);
 
 	}
 
