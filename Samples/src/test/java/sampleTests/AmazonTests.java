@@ -1,15 +1,5 @@
 package sampleTests;
 
-import TestBase.TestBaseUtility;
-import org.apache.commons.logging.Log;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-import pageObjects.AmazonPageObjects;
-import utilities.TestUtilities;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -17,6 +7,17 @@ import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.logging.Log;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import TestBase.TestBaseUtility;
+import pageObjects.AmazonPageObjects;
+import utilities.TestUtilities;
 
 public class AmazonTests extends TestBaseUtility {
 	private static final Logger log = LogManager.getLogger(Log.class);
@@ -46,10 +47,12 @@ public class AmazonTests extends TestBaseUtility {
 
 		List<WebElement> phone_elements = amazonPageObjects.getPhone_elements();
 		// used streams api to do the data transformation
-		List<String> phone_names = phone_elements.parallelStream().map(WebElement::getText).filter(e -> !e.isBlank()).toList();
+		List<String> phone_names = phone_elements.parallelStream().map(WebElement::getText).filter(e -> !e.isBlank())
+				.toList();
 
 		List<WebElement> price_elements = amazonPageObjects.getPrice_elements();
-		List<String> price_text = price_elements.parallelStream().map(WebElement::getText).filter(e -> !e.isBlank()).toList();
+		List<String> price_text = price_elements.parallelStream().map(WebElement::getText).filter(e -> !e.isBlank())
+				.toList();
 
 		LinkedList<String> phone_names_list = new LinkedList<>(phone_names);
 		LinkedList<String> price_list = new LinkedList<>(price_text);
@@ -58,7 +61,7 @@ public class AmazonTests extends TestBaseUtility {
 		all_data.add(phone_names_list);
 		all_data.add(price_list);
 
-		// header row's column names list
+		// header row's column names list, based on this columns will be created
 		LinkedList<String> header_rows = new LinkedList<>(List.of("product names", "price"));
 		TestUtilities.writeListToExcelUsingPOI(all_data, search_term + "_search_results", header_rows);
 
