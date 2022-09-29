@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [INFO ] 2022-09-29 14:49:44.723 [main] Log - Properties loaded!
 [INFO ] 2022-09-29 14:49:44.890 [main] Log - Launching Browser..
 [INFO ] 2022-09-29 14:50:12.252 [main] Log - Properties loaded!
@@ -11,3 +12,31 @@
 [INFO ] 2022-09-29 14:50:37.055 [main] Log - Window handling - LetCode
 [INFO ] 2022-09-29 14:50:37.064 [main] Log - Closing Browser..
 [INFO ] 2022-09-29 14:50:37.788 [main] Log - Browser closed!
+=======
+[INFO ] 2022-09-24 09:50:36.402 [main] Log - Properties loaded!
+[INFO ] 2022-09-24 09:50:36.625 [main] Log - Launching Browser..
+[INFO ] 2022-09-24 09:50:47.462 [main] Log - Properties loaded!
+[INFO ] 2022-09-24 09:50:49.711 [main] Log - Browser launched!
+[INFO ] 2022-09-24 09:50:59.360 [main] Log - Properties loaded!
+[INFO ] 2022-09-24 09:51:02.381 [main] Log - LetCode - Testing Hub
+[INFO ] 2022-09-24 09:51:02.859 [main] Log - Window handling - LetCode
+[INFO ] 2022-09-24 09:51:04.104 [main] Log - Closing LetCode - Testing Hub
+[INFO ] 2022-09-24 09:51:09.155 [main] Log - Closing LetCode with Koushik
+[INFO ] 2022-09-24 09:51:13.464 [main] Log - Closing LetCode with Koushik
+[INFO ] 2022-09-24 09:51:13.585 [main] Log - Window handling - LetCode
+[INFO ] 2022-09-24 09:51:13.602 [main] Log - Closing Browser..
+[INFO ] 2022-09-24 09:51:14.301 [main] Log - Browser closed!
+[INFO ] 2022-09-24 09:54:08.648 [main] Log - Properties loaded!
+[INFO ] 2022-09-24 09:54:08.782 [main] Log - Launching Browser..
+[INFO ] 2022-09-24 09:54:14.118 [main] Log - Properties loaded!
+[INFO ] 2022-09-24 09:54:17.207 [main] Log - Browser launched!
+[INFO ] 2022-09-24 09:54:23.442 [main] Log - Properties loaded!
+[INFO ] 2022-09-24 09:54:26.268 [main] Log - LetCode - Testing Hub
+[INFO ] 2022-09-24 09:54:26.518 [main] Log - Window handling - LetCode
+[INFO ] 2022-09-24 09:54:27.979 [main] Log - Closing LetCode - Testing Hub
+[INFO ] 2022-09-24 09:54:30.185 [main] Log - Closing LetCode with Koushik
+[INFO ] 2022-09-24 09:54:31.350 [main] Log - Closing LetCode with Koushik
+[INFO ] 2022-09-24 09:54:31.628 [main] Log - Window handling - LetCode
+[INFO ] 2022-09-24 09:54:31.652 [main] Log - Closing Browser..
+[INFO ] 2022-09-24 09:54:32.750 [main] Log - Browser closed!
+>>>>>>> refs/remotes/origin/main

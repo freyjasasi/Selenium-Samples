@@ -15,7 +15,7 @@ public class ActionsTests extends TestBaseUtility {
 	private static final Logger log = LogManager.getLogger(Log.class);
 
 	ActionsTests() {
-		super();
+		super(); // calling super class default constructor
 	}
 
 	@Test(groups = { "actions", "hoverOver" })
