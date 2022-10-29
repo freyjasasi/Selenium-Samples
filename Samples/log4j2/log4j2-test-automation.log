@@ -40,3 +40,34 @@
 [INFO ] 2022-09-24 09:54:31.652 [main] Log - Closing Browser..
 [INFO ] 2022-09-24 09:54:32.750 [main] Log - Browser closed!
 >>>>>>> refs/remotes/origin/main
+[INFO ] 2022-10-29 14:33:45.577 [main] Log - Properties loaded!
+[INFO ] 2022-10-29 14:33:45.697 [main] Log - Launching Browser..
+[INFO ] 2022-10-29 14:34:02.125 [main] Log - Properties loaded!
+[INFO ] 2022-10-29 14:34:03.252 [main] Log - Browser launched!
+[INFO ] 2022-10-29 14:34:11.114 [main] Log - Properties loaded!
+[INFO ] 2022-10-29 14:34:11.310 [main] Log - Hey! Welcome to LetCode
+[INFO ] 2022-10-29 14:34:11.343 [main] Log - Alert accepted
+[INFO ] 2022-10-29 14:34:11.467 [main] Log - Are you happy with LetCode?
+[INFO ] 2022-10-29 14:34:11.499 [main] Log - Alert Dismissed
+[INFO ] 2022-10-29 14:34:12.057 [main] Log - Enter your name
+[INFO ] 2022-10-29 14:34:12.084 [main] Log - keys send to alert :Hello Alert!
+[INFO ] 2022-10-29 14:34:12.114 [main] Log - Alert accepted
+[INFO ] 2022-10-29 14:34:12.528 [main] Log - Your name is: Hello Alert!
+[INFO ] 2022-10-29 14:34:12.536 [main] Log - Closing Browser..
+[INFO ] 2022-10-29 14:34:13.279 [main] Log - Browser closed!
+[INFO ] 2022-10-29 14:35:41.674 [main] Log - Properties loaded!
+[INFO ] 2022-10-29 14:35:41.781 [main] Log - Launching Browser..
+[INFO ] 2022-10-29 14:35:47.465 [main] Log - Properties loaded!
+[INFO ] 2022-10-29 14:35:48.374 [main] Log - Browser launched!
+[INFO ] 2022-10-29 14:35:57.275 [main] Log - Properties loaded!
+[INFO ] 2022-10-29 14:35:57.558 [main] Log - Hey! Welcome to LetCode
+[INFO ] 2022-10-29 14:35:57.635 [main] Log - Alert accepted
+[INFO ] 2022-10-29 14:35:57.856 [main] Log - Are you happy with LetCode?
+[INFO ] 2022-10-29 14:35:57.903 [main] Log - Alert Dismissed
+[INFO ] 2022-10-29 14:35:58.794 [main] Log - Enter your name
+[INFO ] 2022-10-29 14:35:58.836 [main] Log - keys send to alert :Hello Alert!
+[INFO ] 2022-10-29 14:35:58.879 [main] Log - Alert accepted
+[INFO ] 2022-10-29 14:35:59.372 [main] Log - screen grab done for: prompt_alert
+[INFO ] 2022-10-29 14:35:59.425 [main] Log - Your name is: Hello Alert!
+[INFO ] 2022-10-29 14:35:59.434 [main] Log - Closing Browser..
+[INFO ] 2022-10-29 14:36:00.202 [main] Log - Browser closed!
