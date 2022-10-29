@@ -71,3 +71,28 @@
 [INFO ] 2022-10-29 14:35:59.425 [main] Log - Your name is: Hello Alert!
 [INFO ] 2022-10-29 14:35:59.434 [main] Log - Closing Browser..
 [INFO ] 2022-10-29 14:36:00.202 [main] Log - Browser closed!
+[INFO ] 2022-10-29 14:46:43.463 [main] Log - Properties loaded!
+[INFO ] 2022-10-29 14:46:43.572 [main] Log - Launching Browser..
+[INFO ] 2022-10-29 14:46:55.423 [main] Log - Properties loaded!
+[INFO ] 2022-10-29 14:46:57.143 [main] Log - Browser launched!
+[INFO ] 2022-10-29 14:47:03.674 [main] Log - Properties loaded!
+[INFO ] 2022-10-29 14:47:04.012 [main] Log - Hey! Welcome to LetCode
+[INFO ] 2022-10-29 14:47:04.081 [main] Log - Alert accepted
+[INFO ] 2022-10-29 14:47:04.100 [main] Log - Closing Browser..
+[INFO ] 2022-10-29 14:47:05.027 [main] Log - Browser closed!
+[INFO ] 2022-10-29 14:47:14.138 [main] Log - Properties loaded!
+[INFO ] 2022-10-29 14:47:14.241 [main] Log - Launching Browser..
+[INFO ] 2022-10-29 14:47:19.734 [main] Log - Properties loaded!
+[INFO ] 2022-10-29 14:47:20.757 [main] Log - Browser launched!
+[INFO ] 2022-10-29 14:47:27.642 [main] Log - Properties loaded!
+[INFO ] 2022-10-29 14:47:27.861 [main] Log - Enter your name
+[INFO ] 2022-10-29 14:47:27.904 [main] Log - keys send to alert :Hello Alert!
+[INFO ] 2022-10-29 14:47:27.949 [main] Log - Alert accepted
+[INFO ] 2022-10-29 14:47:28.382 [main] Log - screen grab done for: prompt_alert
+[INFO ] 2022-10-29 14:47:28.730 [main] Log - Your name is: Hello Alert!
+[INFO ] 2022-10-29 14:47:31.450 [main] Log - Hey! Welcome to LetCode
+[INFO ] 2022-10-29 14:47:31.503 [main] Log - Alert accepted
+[INFO ] 2022-10-29 14:47:36.733 [main] Log - Are you happy with LetCode?
+[INFO ] 2022-10-29 14:47:36.808 [main] Log - Alert Dismissed
+[INFO ] 2022-10-29 14:47:36.817 [main] Log - Closing Browser..
+[INFO ] 2022-10-29 14:47:37.973 [main] Log - Browser closed!
