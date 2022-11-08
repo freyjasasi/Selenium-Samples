@@ -1,98 +1,24 @@
-<<<<<<< HEAD
-[INFO ] 2022-09-29 14:49:44.723 [main] Log - Properties loaded!
-[INFO ] 2022-09-29 14:49:44.890 [main] Log - Launching Browser..
-[INFO ] 2022-09-29 14:50:12.252 [main] Log - Properties loaded!
-[INFO ] 2022-09-29 14:50:13.598 [main] Log - Browser launched!
-[INFO ] 2022-09-29 14:50:30.277 [main] Log - Properties loaded!
-[INFO ] 2022-09-29 14:50:33.752 [main] Log - LetCode - Testing Hub
-[INFO ] 2022-09-29 14:50:33.901 [main] Log - Window handling - LetCode
-[INFO ] 2022-09-29 14:50:34.339 [main] Log - Closing LetCode - Testing Hub
-[INFO ] 2022-09-29 14:50:36.487 [main] Log - Closing LetCode with Koushik
-[INFO ] 2022-09-29 14:50:36.954 [main] Log - Closing LetCode with Koushik
-[INFO ] 2022-09-29 14:50:37.055 [main] Log - Window handling - LetCode
-[INFO ] 2022-09-29 14:50:37.064 [main] Log - Closing Browser..
-[INFO ] 2022-09-29 14:50:37.788 [main] Log - Browser closed!
-=======
-[INFO ] 2022-09-24 09:50:36.402 [main] Log - Properties loaded!
-[INFO ] 2022-09-24 09:50:36.625 [main] Log - Launching Browser..
-[INFO ] 2022-09-24 09:50:47.462 [main] Log - Properties loaded!
-[INFO ] 2022-09-24 09:50:49.711 [main] Log - Browser launched!
-[INFO ] 2022-09-24 09:50:59.360 [main] Log - Properties loaded!
-[INFO ] 2022-09-24 09:51:02.381 [main] Log - LetCode - Testing Hub
-[INFO ] 2022-09-24 09:51:02.859 [main] Log - Window handling - LetCode
-[INFO ] 2022-09-24 09:51:04.104 [main] Log - Closing LetCode - Testing Hub
-[INFO ] 2022-09-24 09:51:09.155 [main] Log - Closing LetCode with Koushik
-[INFO ] 2022-09-24 09:51:13.464 [main] Log - Closing LetCode with Koushik
-[INFO ] 2022-09-24 09:51:13.585 [main] Log - Window handling - LetCode
-[INFO ] 2022-09-24 09:51:13.602 [main] Log - Closing Browser..
-[INFO ] 2022-09-24 09:51:14.301 [main] Log - Browser closed!
-[INFO ] 2022-09-24 09:54:08.648 [main] Log - Properties loaded!
-[INFO ] 2022-09-24 09:54:08.782 [main] Log - Launching Browser..
-[INFO ] 2022-09-24 09:54:14.118 [main] Log - Properties loaded!
-[INFO ] 2022-09-24 09:54:17.207 [main] Log - Browser launched!
-[INFO ] 2022-09-24 09:54:23.442 [main] Log - Properties loaded!
-[INFO ] 2022-09-24 09:54:26.268 [main] Log - LetCode - Testing Hub
-[INFO ] 2022-09-24 09:54:26.518 [main] Log - Window handling - LetCode
-[INFO ] 2022-09-24 09:54:27.979 [main] Log - Closing LetCode - Testing Hub
-[INFO ] 2022-09-24 09:54:30.185 [main] Log - Closing LetCode with Koushik
-[INFO ] 2022-09-24 09:54:31.350 [main] Log - Closing LetCode with Koushik
-[INFO ] 2022-09-24 09:54:31.628 [main] Log - Window handling - LetCode
-[INFO ] 2022-09-24 09:54:31.652 [main] Log - Closing Browser..
-[INFO ] 2022-09-24 09:54:32.750 [main] Log - Browser closed!
->>>>>>> refs/remotes/origin/main
-[INFO ] 2022-10-29 14:33:45.577 [main] Log - Properties loaded!
-[INFO ] 2022-10-29 14:33:45.697 [main] Log - Launching Browser..
-[INFO ] 2022-10-29 14:34:02.125 [main] Log - Properties loaded!
-[INFO ] 2022-10-29 14:34:03.252 [main] Log - Browser launched!
-[INFO ] 2022-10-29 14:34:11.114 [main] Log - Properties loaded!
-[INFO ] 2022-10-29 14:34:11.310 [main] Log - Hey! Welcome to LetCode
-[INFO ] 2022-10-29 14:34:11.343 [main] Log - Alert accepted
-[INFO ] 2022-10-29 14:34:11.467 [main] Log - Are you happy with LetCode?
-[INFO ] 2022-10-29 14:34:11.499 [main] Log - Alert Dismissed
-[INFO ] 2022-10-29 14:34:12.057 [main] Log - Enter your name
-[INFO ] 2022-10-29 14:34:12.084 [main] Log - keys send to alert :Hello Alert!
-[INFO ] 2022-10-29 14:34:12.114 [main] Log - Alert accepted
-[INFO ] 2022-10-29 14:34:12.528 [main] Log - Your name is: Hello Alert!
-[INFO ] 2022-10-29 14:34:12.536 [main] Log - Closing Browser..
-[INFO ] 2022-10-29 14:34:13.279 [main] Log - Browser closed!
-[INFO ] 2022-10-29 14:35:41.674 [main] Log - Properties loaded!
-[INFO ] 2022-10-29 14:35:41.781 [main] Log - Launching Browser..
-[INFO ] 2022-10-29 14:35:47.465 [main] Log - Properties loaded!
-[INFO ] 2022-10-29 14:35:48.374 [main] Log - Browser launched!
-[INFO ] 2022-10-29 14:35:57.275 [main] Log - Properties loaded!
-[INFO ] 2022-10-29 14:35:57.558 [main] Log - Hey! Welcome to LetCode
-[INFO ] 2022-10-29 14:35:57.635 [main] Log - Alert accepted
-[INFO ] 2022-10-29 14:35:57.856 [main] Log - Are you happy with LetCode?
-[INFO ] 2022-10-29 14:35:57.903 [main] Log - Alert Dismissed
-[INFO ] 2022-10-29 14:35:58.794 [main] Log - Enter your name
-[INFO ] 2022-10-29 14:35:58.836 [main] Log - keys send to alert :Hello Alert!
-[INFO ] 2022-10-29 14:35:58.879 [main] Log - Alert accepted
-[INFO ] 2022-10-29 14:35:59.372 [main] Log - screen grab done for: prompt_alert
-[INFO ] 2022-10-29 14:35:59.425 [main] Log - Your name is: Hello Alert!
-[INFO ] 2022-10-29 14:35:59.434 [main] Log - Closing Browser..
-[INFO ] 2022-10-29 14:36:00.202 [main] Log - Browser closed!
-[INFO ] 2022-10-29 14:46:43.463 [main] Log - Properties loaded!
-[INFO ] 2022-10-29 14:46:43.572 [main] Log - Launching Browser..
-[INFO ] 2022-10-29 14:46:55.423 [main] Log - Properties loaded!
-[INFO ] 2022-10-29 14:46:57.143 [main] Log - Browser launched!
-[INFO ] 2022-10-29 14:47:03.674 [main] Log - Properties loaded!
-[INFO ] 2022-10-29 14:47:04.012 [main] Log - Hey! Welcome to LetCode
-[INFO ] 2022-10-29 14:47:04.081 [main] Log - Alert accepted
-[INFO ] 2022-10-29 14:47:04.100 [main] Log - Closing Browser..
-[INFO ] 2022-10-29 14:47:05.027 [main] Log - Browser closed!
-[INFO ] 2022-10-29 14:47:14.138 [main] Log - Properties loaded!
-[INFO ] 2022-10-29 14:47:14.241 [main] Log - Launching Browser..
-[INFO ] 2022-10-29 14:47:19.734 [main] Log - Properties loaded!
-[INFO ] 2022-10-29 14:47:20.757 [main] Log - Browser launched!
-[INFO ] 2022-10-29 14:47:27.642 [main] Log - Properties loaded!
-[INFO ] 2022-10-29 14:47:27.861 [main] Log - Enter your name
-[INFO ] 2022-10-29 14:47:27.904 [main] Log - keys send to alert :Hello Alert!
-[INFO ] 2022-10-29 14:47:27.949 [main] Log - Alert accepted
-[INFO ] 2022-10-29 14:47:28.382 [main] Log - screen grab done for: prompt_alert
-[INFO ] 2022-10-29 14:47:28.730 [main] Log - Your name is: Hello Alert!
-[INFO ] 2022-10-29 14:47:31.450 [main] Log - Hey! Welcome to LetCode
-[INFO ] 2022-10-29 14:47:31.503 [main] Log - Alert accepted
-[INFO ] 2022-10-29 14:47:36.733 [main] Log - Are you happy with LetCode?
-[INFO ] 2022-10-29 14:47:36.808 [main] Log - Alert Dismissed
-[INFO ] 2022-10-29 14:47:36.817 [main] Log - Closing Browser..
-[INFO ] 2022-10-29 14:47:37.973 [main] Log - Browser closed!
+[INFO ] 2022-11-08 16:34:54.734 [main] Log - Properties loaded!
+[INFO ] 2022-11-08 16:34:54.884 [main] Log - Launching Browser..
+[INFO ] 2022-11-08 16:35:17.131 [main] Log - Properties loaded!
+[INFO ] 2022-11-08 16:35:19.483 [main] Log - Browser launched!
+[INFO ] 2022-11-08 16:35:32.698 [main] Log - Properties loaded!
+[INFO ] 2022-11-08 16:35:33.900 [main] Log - Are you happy with LetCode?
+[INFO ] 2022-11-08 16:35:33.942 [main] Log - Alert Dismissed
+[INFO ] 2022-11-08 16:35:33.968 [main] Log - Closing Browser..
+[INFO ] 2022-11-08 16:35:34.666 [main] Log - Browser closed!
+[INFO ] 2022-11-08 16:43:41.490 [main] Log - Properties loaded!
+[INFO ] 2022-11-08 16:43:41.589 [main] Log - Launching Browser..
+[INFO ] 2022-11-08 16:43:52.929 [main] Log - Properties loaded!
+[INFO ] 2022-11-08 16:43:54.693 [main] Log - Browser launched!
+[INFO ] 2022-11-08 16:44:04.785 [main] Log - Properties loaded!
+[INFO ] 2022-11-08 16:44:05.062 [main] Log - Enter your name
+[INFO ] 2022-11-08 16:44:05.104 [main] Log - keys send to alert :Hello Alert!
+[INFO ] 2022-11-08 16:44:05.330 [main] Log - Alert accepted
+[INFO ] 2022-11-08 16:44:05.846 [main] Log - Your name is: Hello Alert!
+[INFO ] 2022-11-08 16:44:12.408 [main] Log - Hey! Welcome to LetCode
+[INFO ] 2022-11-08 16:44:12.598 [main] Log - Alert accepted
+[INFO ] 2022-11-08 16:44:20.092 [main] Log - Are you happy with LetCode?
+[INFO ] 2022-11-08 16:44:20.170 [main] Log - Alert Dismissed
+[INFO ] 2022-11-08 16:44:20.174 [main] Log - Closing Browser..
+[INFO ] 2022-11-08 16:44:21.274 [main] Log - Browser closed!
