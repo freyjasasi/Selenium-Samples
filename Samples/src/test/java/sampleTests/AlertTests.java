@@ -37,7 +37,7 @@ public class AlertTests extends TestBaseUtility {
 		TestUtilities.alertPrompt("Hello Alert!");
 		TestUtilities.alertAccept();
 		WebElement prompt_alert_text = alertPageObjects.getPrompt_alert_text_ok();
-		TestUtilities.screenGrab("prompt_alert"); // screen capture
+//		TestUtilities.screenGrab("prompt_alert"); // screen capture
 		log.info(prompt_alert_text.getText());
 	}
 
