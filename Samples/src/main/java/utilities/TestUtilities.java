@@ -153,7 +153,7 @@ public class TestUtilities extends TestBaseUtility {
 		// creating empty rows first, so it will not overwrite previous written columns
 		// in that same row
 		for (int j = 0; j < colSize; j++) {
-			Row row = sheet.createRow(j + 1);
+			sheet.createRow(j + 1);
 		}
 
 		// main loop to writing to excel
